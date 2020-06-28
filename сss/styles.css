@@ -63,9 +63,6 @@ h2 {
   margin-bottom: 0px;
   margin-top: 0px;
 }
-img {
-  display: block;
-}
 
 /*Header*/
 
@@ -466,7 +463,13 @@ button:focus {
   overflow: hidden;
   width: 370px;
   margin-right: 30px;
-  border: 1px solid #eeeeee;
+  margin-bottom: 30px;
+}
+
+.title-product {
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .flex-element.flex-element:nth-child(3n) {
@@ -474,6 +477,10 @@ button:focus {
 }
 
 .works-list .title {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 4px;
   color: var(--title-text-color);
   font-size: 18px;
   letter-spacing: 0.06em;
@@ -481,12 +488,18 @@ button:focus {
 }
 
 .works-list .product {
+  padding-left: 24px;
+  margin-right: 24px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
   font-size: 16px;
   line-height: 1.8;
 }
 
 .overlay {
   position: relative;
+  overflow: hidden;
 }
 
 .works-description {
@@ -495,6 +508,10 @@ button:focus {
   right: 0;
   margin-top: 0px;
   margin-bottom: 0px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 63px;
+  padding-bottom: 63px;
   height: 294px;
   display: block;
   transform: translateY(100%);
@@ -506,88 +523,73 @@ button:focus {
   background: rgba(33, 150, 243, 0.9);
 }
 
-.flex-element:hover .works-description,
-.flex-element:focus .works-description {
+.flex-element:hover .works-description {
   transform: translateY(0);
 }
 
 /*
-.works-description::before {
-  display: inline-block;
-  content: "";
-  position: absolute;
+.flex-element:focus .works-description {
+  transform: translateY(0);
 }*/
 
-/*
-.overlay::before {
-  display: inline-block;
-  content: '';
-  position: absolute;
-  top: 0,
-  left: 0,
-}*/
+.flex-element:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 
+  /* Footer */
 
+  .address-phone-join {
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
-.works-list:hover .works-overlay {
-  transform: translateX(0);
-  opacity: 1;
-}
+  .footer {
+    background-color: #2f303a;
+  }
 
-/* Footer */
+  .logo-footer {
+    color: var(--primary-white-color);
+    font-family: Raleway, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.1;
+  }
 
-.address-phone-join {
-  display: flex;
-  align-items: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
+  .address-footer {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: inherit;
+    line-height: 1.7;
+  }
 
-.footer {
-  background-color: #2f303a;
-}
+  .social-network-list-footer {
+    display: flex;
+    padding-left: 69px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+  }
 
-.logo-footer {
-  color: var(--primary-white-color);
-  font-family: Raleway, sans-serif;
-  font-size: 26px;
-  font-weight: bold;
-  line-height: 1.1;
-}
+  .social-network-list-footer .item + .item {
+    margin-left: 10px;
+  }
 
-.address-footer {
-  color: rgba(255, 255, 255, 0.6);
-  font-style: inherit;
-  line-height: 1.7;
-}
+  .background-social-network-footer {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    fill: var(--primary-white-color);
+    background-color: #44454e;
+    border-radius: 50%;
+  }
 
-.social-network-list-footer {
-  display: flex;
-  padding-left: 69px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 32px;
-}
-
-.social-network-list-footer .item + .item {
-  margin-left: 10px;
-}
-
-.background-social-network-footer {
-  width: 44px;
-  height: 44px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  fill: var(--primary-white-color);
-  background-color: #44454e;
-  border-radius: 50%;
-}
-
-.background-social-network-footer:hover,
-.background-social-network-footer:focus {
-  background-color: var(--accent-color);
-}
+  .background-social-network-footer:hover,
+  .background-social-network-footer:focus {
+    background-color: var(--accent-color);
+  }
 
 .physical-address {
   color: var(--primary-white-color);
