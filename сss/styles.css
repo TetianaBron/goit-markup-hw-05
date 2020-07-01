@@ -523,13 +523,12 @@ button:focus {
   background: rgba(33, 150, 243, 0.9);
 }
 
-.flex-element:hover .works-description {
+.flex-element .link:hover .works-description,
+.flex-element .link:focus .works-description {
   transform: translateY(0);
 }
 
 .flex-element {
-  position: relative;
-  overflow: hidden;
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
@@ -539,8 +538,9 @@ button:focus {
   display: block;
 }
 
-.flex-element:hover,
+.flex-element .link:hover,
 .flex-element .link:focus {
+  outline: none;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
   transition: box-shadow 250ms var(--timing-function);
